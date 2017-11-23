@@ -1,0 +1,30 @@
+{
+   "sap.ui5" : {   
+			"rootView" : "ge.in.splitapp.view.SApp",
+			"routing" : {
+			   "config" : {
+			     "routerClass" : "sap.m.routing.Router",
+			     "viewType" : "XML",
+			     "controlId" : "idSApp"
+			   },
+			   "routes" : [
+			         {
+			            "pattern" : "",
+			            "name" : "default",
+			            "target" : ["prodList", "prodDtl"]
+			         }
+			   ],
+			   "targets" : {
+			   	   "prodList" : {
+			   	   "viewName" : "ge.in.splitapp.view.ProductList",
+			   	   "controlAggregation" : "masterPages"
+			   	   },
+			   	   "prodDtl" : {
+			   	   "viewName" : "ge.in.splitapp.view.ProductDetails",
+			   	   "controlAggregation" : "detailPages"
+			   	   }
+			   
+			   }
+			}
+   }
+}
